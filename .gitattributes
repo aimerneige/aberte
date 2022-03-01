@@ -19,3 +19,4 @@ LICENSE text    eof=lf
 .gitattributes  text  eof=lf
 .gitconfig  text  eof=lf
 .gitignore  text  eof=lf
+Makefile    text  eof=lf
