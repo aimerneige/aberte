@@ -4,15 +4,15 @@ namespace MyApp {
 		public GLib.Settings settings;
 		public Gtk.Stack stack { get; set; }
 
-	    public Window (Application app) {
-	    	Object (
-	    		application: app
-	    	);
-	    }
+		public Window (Application app) {
+			Object (
+				application: app
+			);
+		}
 
-    	construct {
-		    window_position = Gtk.WindowPosition.CENTER;
-		    set_default_size (350, 80);
+		construct {
+			window_position = Gtk.WindowPosition.CENTER;
+			set_default_size (350, 80);
 
 			settings = new GLib.Settings ("com.github.aimerneige.aberte");
 			move (settings.get_int ("pos-x"), settings.get_int ("pos-y"));
@@ -38,8 +38,8 @@ namespace MyApp {
 			var headerbar = new MyApp.HeaderBar (this);
 			set_titlebar (headerbar);
 
-		    show_all ();
-	    }
+			show_all ();
+		}
 
 		public bool before_destory() {
 			int width, height, x, y;
